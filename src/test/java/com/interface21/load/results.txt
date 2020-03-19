@@ -1,0 +1,9 @@
+Test suite name='Demo suite': numTests=40; numberOfWorkerThreads=3; maxPause=23
+-----------------------------------
+NoPauseTest-0	1000/1000	errs=0	?hps	avg=0ms
+DemoTest-1	40/40	errs=0	3.41hps	avg=292ms
+NoPauseTest-2	1000/1000	errs=0	?hps	avg=0ms
+*********** Total hits=2040
+*********** HPS=?
+*********** Average response=97
+
