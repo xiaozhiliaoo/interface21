@@ -186,7 +186,7 @@ public class SqlMapClientTemplate extends JdbcAccessor implements SqlMapClientOp
 													 final RowHandler rowHandler) throws DataAccessException {
 		return executeWithListResult(new SqlMapClientCallback() {
 			public Object doInSqlMapClient(SqlMapExecutor executor) throws SQLException {
-				return executor.queryForList(statementName, parameterObject, rowHandler);
+				return executor.queryForObject(statementName, parameterObject, rowHandler);
 			}
 		});
 	}

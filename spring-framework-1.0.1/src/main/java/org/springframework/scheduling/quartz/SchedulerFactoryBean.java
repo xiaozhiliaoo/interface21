@@ -221,7 +221,7 @@ public class SchedulerFactoryBean implements FactoryBean, InitializingBean, Disp
 			for (Iterator it = this.calendars.keySet().iterator(); it.hasNext();) {
 				String calendarName = (String) it.next();
 				Calendar calendar = (Calendar) this.calendars.get(calendarName);
-				this.scheduler.addCalendar(calendarName, calendar, true);
+				this.scheduler.addCalendar(calendarName, calendar, true,true);
 			}
 		}
 
