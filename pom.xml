@@ -8,12 +8,14 @@
     <artifactId>interface21</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>spring-framework-1.0.1</module>
+    </modules>
 
 
-
-  <!--  <modules>
-        <module>wrox</module>
-    </modules>-->
+    <!--  <modules>
+          <module>wrox</module>
+      </modules>-->
 
 
     <dependencies>

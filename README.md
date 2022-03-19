@@ -5,7 +5,7 @@ interface21是Spring的初始版本，形成于2000-2003年间。也是《Expert
 
 [Expert+One+on+One+J2EE+Design+and+Development](https://www.wiley.com/en-us/Expert+One+on+One+J2EE+Design+and+Development-p-9780764543852#downloads-section)
 
-[Expert+One+on+One+J2EE+Development+without+EJB](https://www.wiley.com/en-us/Expert+One+on+One+J2EE+Development+without+EJB-p-9780764573903#downloads-section)
+[Expert+One+on+One+J2EE+Development+without+EJB](https://www.wiley.com/en-gb/Expert+One+on+One+J2EE+Development+without+EJB-p-9780764558313)
 
 [Gitee-interface21](https://gitee.com/xiaozhiliaoo/interface21)
 
