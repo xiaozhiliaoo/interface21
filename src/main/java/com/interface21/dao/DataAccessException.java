@@ -16,7 +16,7 @@ import com.interface21.core.NestedRuntimeException;
  * to be considered fatal (the usual case).
  * @author Rod Johnson
  */
-public abstract class DataAccessException extends NestedRuntimeException {
+public abstract class  DataAccessException extends NestedRuntimeException {
 
 	/**
 	 * Constructor for DataAccessException.
