@@ -5,108 +5,112 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.lili</groupId>
-    <artifactId>interface21</artifactId>
+    <artifactId>interface21-all</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>spring-framework-1.0.1</module>
+        <module>wrox</module>
+        <module>interface21</module>
     </modules>
 
 
-    <!--  <modules>
-          <module>wrox</module>
-      </modules>-->
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.17</version>
+            </dependency>
+
+            <dependency>
+                <groupId>regexp</groupId>
+                <artifactId>regexp</artifactId>
+                <version>1.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>servlet-api</artifactId>
+                <version>2.5</version>
+            </dependency>
 
 
-    <dependencies>
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.17</version>
-        </dependency>
+            <dependency>
+                <groupId>javax.ejb</groupId>
+                <artifactId>ejb-api</artifactId>
+                <version>3.0</version>
+            </dependency>
 
-        <dependency>
-            <groupId>regexp</groupId>
-            <artifactId>regexp</artifactId>
-            <version>1.3</version>
-        </dependency>
-
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <version>2.5</version>
-        </dependency>
+            <dependency>
+                <groupId>javax.jms</groupId>
+                <artifactId>javax.jms-api</artifactId>
+                <version>2.0.1</version>
+            </dependency>
 
 
-        <dependency>
-            <groupId>javax.ejb</groupId>
-            <artifactId>ejb-api</artifactId>
-            <version>3.0</version>
-            <scope>provided</scope>
-        </dependency>
+            <dependency>
+                <groupId>javax.transaction</groupId>
+                <artifactId>transaction-api</artifactId>
+                <version>1.1</version>
+                <scope>provided</scope>
+            </dependency>
 
-        <dependency>
-            <groupId>javax.jms</groupId>
-            <artifactId>javax.jms-api</artifactId>
-            <version>2.0.1</version>
-        </dependency>
+            <dependency>
+                <groupId>org.apache.velocity</groupId>
+                <artifactId>velocity</artifactId>
+                <version>1.7</version>
+            </dependency>
 
+            <dependency>
+                <groupId>javax</groupId>
+                <artifactId>javaee-web-api</artifactId>
+                <version>7.0</version>
+                <scope>provided</scope>
+            </dependency>
 
-        <dependency>
-            <groupId>javax.transaction</groupId>
-            <artifactId>transaction-api</artifactId>
-            <version>1.1</version>
-            <scope>provided</scope>
-        </dependency>
+            <dependency>
+                <groupId>org.enhydra.xmlc</groupId>
+                <artifactId>xmlc-all-runtime</artifactId>
+                <version>2.2.7.1</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.apache.velocity</groupId>
-            <artifactId>velocity</artifactId>
-            <version>1.7</version>
-        </dependency>
+            <dependency>
+                <groupId>webmacro</groupId>
+                <artifactId>webmacro</artifactId>
+                <version>1.1final</version>
+            </dependency>
 
-        <dependency>
-            <groupId>javax</groupId>
-            <artifactId>javaee-web-api</artifactId>
-            <version>7.0</version>
-            <scope>provided</scope>
-        </dependency>
+            <!--for FormatHelper.java WrappedRuntimeException-->
+            <dependency>
+                <groupId>xalan</groupId>
+                <artifactId>xalan</artifactId>
+                <version>2.7.2</version>
+            </dependency>
 
-        <dependency>
-            <groupId>org.enhydra.xmlc</groupId>
-            <artifactId>xmlc-all-runtime</artifactId>
-            <version>2.2.7.1</version>
-        </dependency>
+            <dependency>
+                <groupId>com.lowagie</groupId>
+                <artifactId>itext</artifactId>
+                <version>1.1.4</version>
+            </dependency>
 
-        <dependency>
-            <groupId>webmacro</groupId>
-            <artifactId>webmacro</artifactId>
-            <version>1.1final</version>
-        </dependency>
-
-        <!--for FormatHelper.java WrappedRuntimeException-->
-        <dependency>
-            <groupId>xalan</groupId>
-            <artifactId>xalan</artifactId>
-            <version>2.7.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.lowagie</groupId>
-            <artifactId>itext</artifactId>
-            <version>4.2.2</version>
-        </dependency>
-
-
-
-
-
-    </dependencies>
-
+        </dependencies>
+    </dependencyManagement>
 
 
     <build>
         <finalName>${project.artifactId}</finalName>
+        <resources>
+            <resource>
+                <directory>lib</directory>
+                <includes>
+                    <include>**</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+        </resources>
+
         <plugins>
             <!-- 资源文件拷贝插件 -->
             <plugin>

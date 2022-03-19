@@ -122,9 +122,9 @@ public abstract class HttpServletBean extends HttpServlet {
 			Set missingProps = (requiredProperties != null && !requiredProperties.isEmpty()) ?
 					new HashSet(requiredProperties) : null;
 
-			Enumeration enum = config.getInitParameterNames();
-			while (enum.hasMoreElements()) {
-				String property = (String) enum.nextElement();
+			Enumeration enum1 = config.getInitParameterNames();
+			while (enum1.hasMoreElements()) {
+				String property = (String) enum1.nextElement();
 				Object value = config.getInitParameter(property);
 				addPropertyValue(new PropertyValue(property, value));
 				if (missingProps != null) {

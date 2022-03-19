@@ -1,0 +1,1 @@
+NB: XMLC 2.1 needs some patches to common libraries, included here.

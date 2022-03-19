@@ -211,13 +211,13 @@ public abstract class WebUtils {
 	 * containing either a String or a String[] as values
 	 */
 	public static Map getParametersStartingWith(ServletRequest request, String base) {
-		Enumeration enum = request.getParameterNames();
+		Enumeration enum1 = request.getParameterNames();
 		Map params = new HashMap();
 		if (base == null) {
 			base = "";
 		}
-		while (enum != null && enum.hasMoreElements()) {
-			String paramName = (String) enum.nextElement();
+		while (enum1 != null && enum1.hasMoreElements()) {
+			String paramName = (String) enum1.nextElement();
 			if (base == null || "".equals(base) || paramName.startsWith(base)) {
 				String unprefixed = paramName.substring(base.length());
 				String[] values = request.getParameterValues(paramName);
